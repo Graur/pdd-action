@@ -10,6 +10,7 @@ RUN apk add --update --no-cache ruby xz-libs && \
     "build-base" "ruby-dev" \
     "libxml2-dev" "libxslt-dev" "file-dev" && \
   gem install --no-document bundle && \
+  apt install libmagic-dev && \
   bundle config build.nokogiri --use-system-libraries && \
   gem install --no-document json && \
   gem install --no-document pdd && \
